@@ -1,5 +1,13 @@
-target/
+*.iml
+*.xml
+.DS_Store
+/.project
+/.settings
+/RUNNING_PID
 boot/
 lib_managed/
-src_managed/
+logs
 project/plugins/project/
+src_managed/
+target/
+testproject
