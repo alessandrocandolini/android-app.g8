@@ -43,15 +43,20 @@ jobs:
           !/nix/var/nix/db/big-lock
           !/nix/var/nix/db/reserved
           /home/runner/.gradle/caches/**
-         key: \${{ runner.os }}-nix-and-grandle-store
+         key: \${{ runner.os }}-\${{ hashFiles('**/build.gradle.kts', 'shell.nix') }}-nix-and-gradle-store
 
       - name: Install nix
         uses: cachix/install-nix-action@v20
         with:
           nix_path: nixpkgs=channel:nixos-unstable
 
+      - name: Check cache hits
+        shell: bash
+        run: |
+          echo "Cache hit: \${{steps.get-cache.outputs.cache-hit}}"
+
       - name: run unit tests and build
-        run:  nix-shell --pure --run "gradle --console=plain --no-daemon --quiet --stacktrace testDebug assembleDebug"
+        run:  nix-shell --pure --run "gradle --console=plain --no-daemon --quiet testDebug assembleDebug"
 
       - name: Calculate version number
         uses: reecetech/version-increment@2023.4.1
