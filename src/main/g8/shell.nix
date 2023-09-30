@@ -13,6 +13,7 @@ let
   android-sdk = android-nixpkgs.sdk (sdkPkgs: with sdkPkgs; [
     cmdline-tools-latest
     build-tools-34-0-0
+    build-tools-31-0-1
     platform-tools
     platforms-android-34
     emulator
