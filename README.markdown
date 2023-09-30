@@ -39,7 +39,9 @@ Giter8 crash course:
 
 A more comprehensive guide here: http://www.foundweekends.org/giter8/Contents+in+Depth.html
 
-To test the template, giter8 provides a sbt command `g8Test`, which unfortunately has some drawbacks. For this reason, the recommended approach is to test the template by generating a fake project and try to compile with LaTeX the generated code. That's exactly what the github action CI is doing. 
+## WARNING 
+
+NO test is executed yet! 
 
 Template license
 ----------------
