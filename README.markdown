@@ -2,14 +2,16 @@
 
 # android-app.g8
 
-Opinionated [Giter8](https://www.foundweekends.org/giter8/) template for personal projects involving native Android development in Kotlin. There no attempt at making this close to mainstream industry standards (quite the opposite!) 
+Opinionated [Giter8](https://www.foundweekends.org/giter8/) template to generate native Android projects in Gradle/Kotlin. Used primarily for personal projects. No attempt has been made to adhere to Android development industry standards (quite the opposite!) 
+
+## Why Giter8?
 
 [Giter8](https://www.foundweekends.org/giter8/) is a template engine written in the [Scala programming language](https://www.scala-lang.org/), integrated in the Scala build tool ([sbt](https://www.scala-sbt.org/)) and powered by [StringTemplate](https://www.stringtemplate.org/). 
 There are plenty of templating tools available (eg, [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) or [jinjia](https://jinja.palletsprojects.com/) in python, etc) but I've found g8 particularly handy: it has limitations but it tries to encourage a declarative approach to templates. No familiarity with Scala is needed to use or even contribute to the template. 
 
-## How to run it 
+## How to run the template 
 
-Requirements: either [sbt](https://www.scala-sbt.org/) or [g8](https://www.foundweekends.org/giter8/) must be installed in the system. One option to install `sbt` is not use an ephemeral `nix` shell: 
+Requirements: either [sbt](https://www.scala-sbt.org/) or [g8](https://www.foundweekends.org/giter8/). One option to install `sbt` is not use an ephemeral `nix` shell: 
 ```bash
 nix-shell -p sbt 
 ```
@@ -17,7 +19,6 @@ Alternatively, on MACOS it's possible to use `homebrew`
 ```bash
 brew install sbt
 ```
-
 Once sbt is installed, to generate a new project use
 ```
 sbt new git@github.com:alessandrocandolini/android-app.g8.git --name=<name> --force
