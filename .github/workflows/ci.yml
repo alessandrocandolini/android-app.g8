@@ -42,3 +42,9 @@ jobs:
         run: |
           cd testproject
           ./gradlew --console=plain --no-daemon --info testDebug assembleDebug
+
+      - name: Check artifact existence
+        uses: andstor/file-existence-action@v2
+        with:
+          fail: true
+          files: "testproject/app/build/outputs/apk/debug/app-debug.apk"
