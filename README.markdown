@@ -39,10 +39,6 @@ Giter8 crash course:
 
 A more comprehensive guide here: http://www.foundweekends.org/giter8/Contents+in+Depth.html
 
-## WARNING 
-
-NO test is executed yet! 
-
 Template license
 ----------------
 Written in 2022-2023 by Alessandro Candolini alessandro.candolini@gmail.com
