@@ -75,8 +75,6 @@ plugins.withType<TestLoggerPlugin> {
 
 dependencies {
 
-    val kotestVersion = "5.7.2"
-
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.activity:activity-compose:1.7.2")
@@ -92,7 +90,5 @@ dependencies {
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
-    testImplementation("io.kotest:kotest-runner-junit5:\$kotestVersion")
-    testImplementation("io.kotest:kotest-assertions-core:\$kotestVersion")
-    testImplementation("io.kotest:kotest-property:\$kotestVersion")
+    testImplementation(libs.bundles.kotest)
 }
