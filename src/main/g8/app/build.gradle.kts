@@ -11,11 +11,11 @@ plugins {
 }
 
 android {
-    namespace = "$namespace"
+    namespace = "$namespace$"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "namespace"
+        applicationId = "$namespace$"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
