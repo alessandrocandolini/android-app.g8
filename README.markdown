@@ -1,30 +1,31 @@
-
+[![Template ci](https://github.com/alessandrocandolini/android-app.g8/actions/workflows/ci.yml/badge.svg)](https://github.com/alessandrocandolini/android-app.g8/actions/workflows/ci.yml)
 
 # android-app.g8
 
-Opinionated giter8 template for personal short native Android apps in kotlin. No attempt at making this compatible with industry standards (quite the opposite) 
+Opinionated [Giter8](https://www.foundweekends.org/giter8/) template to generate native Android projects in Gradle/Kotlin. Used primarily for personal projects. No attempt has been made to adhere to Android development industry standards (quite the opposite!) 
+
+## Why Giter8?
 
 [Giter8](https://www.foundweekends.org/giter8/) is a template engine written in the [Scala programming language](https://www.scala-lang.org/), integrated in the Scala build tool ([sbt](https://www.scala-sbt.org/)) and powered by [StringTemplate](https://www.stringtemplate.org/). 
-There are plenty of templating tools available (eg, cookiecutter or jinjia in python, etc) but I find g8 particularly handy: it has limitations but it tries to encourage a declarative approach to templates. You don't need familiarity with Scala to use or even contribute to the template. 
+There are plenty of templating tools available (eg, [cookiecutter](https://cookiecutter.readthedocs.io/en/stable/) or [jinjia](https://jinja.palletsprojects.com/) in python, etc) but I've found g8 particularly handy: it has limitations but it tries to encourage a declarative approach to templates. No familiarity with Scala is needed to use or even contribute to the template. 
 
-## How to use it 
+## How to run the template 
 
-You need either [sbt](https://www.scala-sbt.org/) or [g8](https://www.foundweekends.org/giter8/) installed in your system to run the template. To install it, you can use for example `nix`: 
+Requirements: either [sbt](https://www.scala-sbt.org/) or [g8](https://www.foundweekends.org/giter8/). One option to install `sbt` is not use an ephemeral `nix` shell: 
 ```bash
 nix-shell -p sbt 
 ```
-Alternatively, on MACOS another option can be to install it via `homebrew`
-```
+Alternatively, on MACOS it's possible to use `homebrew`
+```bash
 brew install sbt
 ```
-
-Once sbt is installed, it is possible to generate a new project using 
+Once sbt is installed, to generate a new project use
 ```
 sbt new git@github.com:alessandrocandolini/android-app.g8.git --name=<name> --force
 ```
 This will generate a folder `name` (if not already present) and create a new project in it. 
 
-`name` is the only mandatory option here. If you don't specify the other options, default values for the repo name (`repo_name`) and package (`packaged`) will be assigned.  
+`name` is the only mandatory option here. Unless independently specified, default values for the repo name (`repo_name`) and package (`packaged`) will be provided.  
 
 See http://www.foundweekends.org/giter8/usage.html#Usage for more details on how to use g8
 
